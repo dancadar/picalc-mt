@@ -8,8 +8,11 @@
 
 int main()
 {
-   const std::size_t total_points_arg = 10000000;
-   static constexpr std::size_t ThreadsNum = 4;
+   int ThreadsNum;
+   printf("How many threads to use? \n");
+   scanf("%d", &ThreadsNum);	
+   const std::size_t total_points_arg = 10000000000;
+   //static constexpr std::size_t ThreadsNum = t;
 
    std::atomic<size_t> total_points_in(0);
    const auto run = [&total_points_in](const std::size_t points){
