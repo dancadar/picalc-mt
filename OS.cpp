@@ -10,8 +10,13 @@ int main()
 {
    int ThreadsNum;
    printf("How many threads to use? \n");
-   scanf("%d", &ThreadsNum);	
-   const std::size_t total_points_arg = 10000000000;
+   scanf("%d", &ThreadsNum);
+   int iterations;
+   printf("How many iterations to run (milions)?\n");
+   scanf("%d", &iterations);
+   int total_points_arg;
+   total_points_arg = iterations * 1000000000;
+   //const std::size_t total_points_arg = 1000000000;
    //static constexpr std::size_t ThreadsNum = t;
 
    std::atomic<size_t> total_points_in(0);
